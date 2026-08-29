@@ -1,0 +1,10 @@
+{
+  "description": "Estimate and plan Bengali wedding budgets with detailed cost breakdowns, customizable inputs, and responsive design for all devices.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

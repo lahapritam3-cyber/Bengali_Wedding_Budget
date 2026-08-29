@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #FDF8F0;
+  --color-bg-dark: #1A0F0A;
+  --color-surface: #FFFDF8;
+  --color-surface-dark: #261510;
+  --color-crimson: #8B1A2B;
+  --color-crimson-light: #B02238;
+  --color-crimson-dark: #E05070;
+  --color-gold: #C8920A;
+  --color-gold-light: #F0C040;
+  --color-saffron: #E8841A;
+  --color-ivory: #F5E6C8;
+  --color-ivory-dark: #3D2415;
+  --color-warm: #F0E8D8;
+  --color-warm-dark: #2E1A10;
+  --color-muted-fg: #8B7355;
+  --color-muted-fg-dark: #A0856A;
+  --color-border-warm: #E8D5B0;
+  --color-border-dark: #4A2D1A;
+  --color-text: #2C1810;
+  --color-text-dark: #F5ECD8;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #E8D5B0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #C8920A; }
+
+/* Print styles */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  body { background: white !important; color: black !important; }
+}
+.print-only { display: none; }
+
+/* Alpana pattern background */
+.alpana-bg {
+  background-image: radial-gradient(circle at 25px 25px, rgba(200, 146, 10, 0.08) 2px, transparent 0),
+    radial-gradient(circle at 75px 75px, rgba(139, 26, 43, 0.06) 2px, transparent 0);
+  background-size: 100px 100px;
+}
+
+/* Card hover transitions */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(139, 26, 43, 0.12);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #8B1A2B, #C8920A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Input focus styles */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #8B1A2B;
+  box-shadow: 0 0 0 3px rgba(139, 26, 43, 0.12);
+}
+
+/* Smooth transitions */
+* { transition-property: color, background-color, border-color; transition-duration: 150ms; }
+
+/* Touch-friendly tap targets */
+button { min-height: 44px; }
